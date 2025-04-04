@@ -15,12 +15,5 @@ def get_num_chars(path_to_file):
             else:
                 value = char_count[char]
                 char_count[char] = value + 1
-    return char_count
-
-def sort_on(dict):
-    return dict["num"]
-
-def sorted_char_list(path_to_file):
-    char_count = get_num_chars
-    char_count.sort(reverse=True, key=sort_on)
-    print(char_count)
+        sorted_char = sorted(char_count.items(), key=lambda item: item[1], reverse=True)
+    return sorted_char
